@@ -18,6 +18,7 @@ class PokemonInfo {
    int id;
    String name;
    String sprites;
+   String abilities;
 
    PokemonInfo({
    required this.type,
@@ -26,6 +27,7 @@ class PokemonInfo {
      required this.id,
      required this.name,
      required this.sprites,
+     required this.abilities
 });
 
   factory PokemonInfo.fromJson(Map<String, dynamic> json) {
@@ -35,7 +37,10 @@ class PokemonInfo {
          weight: json['weight'],
          id: json['id'],
         name: json['species']['name'], 
-        sprites: json['sprites']['other']['home']['front_default']
+        sprites: json['sprites']['other']['home']['front_default'],
+        abilities: json['abilities'][0]['ability']['name'],
+        // abilities[0].ability.name
+        
         
         );
         
