@@ -1,4 +1,6 @@
 // ignore_for_file: prefer_const_constructors
+import 'dart:math';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:pokemon_card/services/networking.dart';
@@ -18,13 +20,22 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final textController = TextEditingController();
-  int characterName = 1;
-  late String query;
+ 
+  
+  void updateUI(){
+   setState(() {
+      // make changes to the state here.
+      final number = Random().nextInt(1200);
+      getpokemondata(number);
+      print(number);
+    });
+}
+  
 
   @override
   Widget build(BuildContext context) {
-    // getpokemondata(characterName);
+
+    
 
     return Scaffold(
       backgroundColor: Colors.purpleAccent,
@@ -42,7 +53,7 @@ class _HomePageState extends State<HomePage> {
               
               SizedBox(height: 20),
               FlippingPokemonCard(
-                query: characterName,
+                
               ),
               SizedBox(
                 height: 20,
@@ -51,7 +62,8 @@ class _HomePageState extends State<HomePage> {
                GestureDetector(
                 onTap: (() {
                   setState(() {
-                    FlippingPokemonCard(query: 8);
+                    updateUI();
+                    
                   });
                 }),  
                 child: Container(
