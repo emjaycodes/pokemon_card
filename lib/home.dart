@@ -19,7 +19,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final textController = TextEditingController();
-  String characterName = '';
+  int characterName = 1;
   late String query;
 
   @override
@@ -37,41 +37,30 @@ class _HomePageState extends State<HomePage> {
         children: [
           Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextFormField(
-                  controller: textController,
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white.withOpacity(0.5),
-                    hintText: 'Type character name',
-                    hintStyle: GoogleFonts.poppins(fontSize: 12),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        width: 3,
-                        color: Colors.black26,
-                      ),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
-                ),
+              
+              SizedBox(height: 35),
+              
+              SizedBox(height: 20),
+              FlippingPokemonCard(
+                query: characterName,
               ),
-              SizedBox(height: 5),
-              GestureDetector(
+              SizedBox(
+                height: 20,
+              ),
+
+               GestureDetector(
                 onTap: (() {
                   setState(() {
-                    characterName = textController.text;
-                    FlippingPokemonCard(query: characterName);
-                    print(characterName);
+                    FlippingPokemonCard(query: 8);
                   });
-                }),
+                }),  
                 child: Container(
                   height: 50,
                   width: 100,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.yellow,
-                       boxShadow: [
+                       boxShadow: const [
                       BoxShadow(
                         color: Colors.black,
                         offset: Offset(0, 3.0),
@@ -83,20 +72,11 @@ class _HomePageState extends State<HomePage> {
                       
                   child: Center(
                       child: Text(
-                    'Search',
+                    'Generate',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
                   )),
                 ),
-              ),
-              SizedBox(height: 20),
-              FlippingPokemonCard(
-                query: characterName,
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              
-            
+               )
             ],
           ),
         ],
