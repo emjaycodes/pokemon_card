@@ -6,13 +6,14 @@ import 'package:pokemon_card/models/pokemon.dart';
 import 'package:pokemon_card/services/networking.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:pokemon_card/utilities/animatedtext.dart';
+import 'dart:math';
 
 
 class FlippingPokemonCard extends StatefulWidget {
 
     FlippingPokemonCard({super.key, required this.query,});
   
-  String query;
+  int query;
   @override
   State<FlippingPokemonCard> createState() => _FlippingPokemonCardState();
 }
@@ -22,13 +23,16 @@ class _FlippingPokemonCardState extends State<FlippingPokemonCard> {
     
      PokemonInfo? pokemonInfo;
       bool initialized = false;
+          
       
-    
+        
   @override
   void initState() {
     super.initState();
     try {
-      getpokemondata('').then((res) {
+      
+      getpokemondata().then((res) {
+        
           pokemonInfo = res;
           initialized = true;
           if (mounted) setState(() {});
@@ -48,7 +52,7 @@ class _FlippingPokemonCardState extends State<FlippingPokemonCard> {
       children: [
         Center(
           child: Container(
-            height: 400,
+            height: 550,
             width: 300,
             child: FlipCard(
                 front: Container(
@@ -97,10 +101,20 @@ class _FlippingPokemonCardState extends State<FlippingPokemonCard> {
                       ),
                       SizedBox(height: 10,),
 
-                      Text(pokemonInfo!.name,
+                      Text('Name: ${pokemonInfo!.name}',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 40,
+                        fontSize: 30,
+                      ),
+                      ),
+
+                      SizedBox(height: 10,),
+
+
+                    Text('abilty: ${pokemonInfo!.abilities}',
+                       style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
                       ),
                       ),
 
@@ -109,17 +123,17 @@ class _FlippingPokemonCardState extends State<FlippingPokemonCard> {
                       Text('Type: ${pokemonInfo!.type}',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 40,
+                        fontSize: 30,
                       ),
                       ),
 
                       SizedBox(height: 10,),
 
                       Text(
-                       'Height: ${pokemonInfo!.height.toString()} Ft',
+                       'Height: ${pokemonInfo!.height.toString()} cm',
                        style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 40,
+                        fontSize: 30,
                       ),
                       ),
 
@@ -128,9 +142,10 @@ class _FlippingPokemonCardState extends State<FlippingPokemonCard> {
                       Text('weight: ${pokemonInfo!.weight} Kg',
                        style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 40,
+                        fontSize: 30,
                       ),
-                      )
+                      ),
+
                     ],
                   ),
                 )),
