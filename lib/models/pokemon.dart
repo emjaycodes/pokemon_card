@@ -2,8 +2,6 @@
 //
 //     final pokemonInfo = pokemonInfoFromJson(jsonString);
 
-import 'package:flutter/cupertino.dart';
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 PokemonInfo pokemonInfoFromJson(String str) => PokemonInfo.fromJson(json.decode(str));
@@ -40,8 +38,6 @@ class PokemonInfo {
         sprites: json['sprites']['other']['home']['front_default'],
         abilities: json['abilities'][0]['ability']['name'],
         // abilities[0].ability.name
-        
-        
         );
         
         

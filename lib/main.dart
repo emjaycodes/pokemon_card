@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flip_card/flip_card.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pokemon_card/home.dart';
 
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(),
         primarySwatch: Colors.blue,
       ),
-      home:  HomePage()
+      home:  const HomePage()
     );
   }
 }
