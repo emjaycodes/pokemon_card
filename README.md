@@ -1,16 +1,49 @@
-# pokemon_card
+# Pokémon Card
 
-A new Flutter project.
+Pokémon Card is a Flutter application that generates random Pokémon cards using the PokeAPI. Each card displays information such as the Pokémon's ID, name, abilities, type, height, and weight.
+
+## Features
+
+- Generate Random Pokémon Card: Press the "Generate" button to fetch data for a random Pokémon and display its card.
+- Flipping Animation: The Pokémon card uses a flip animation to reveal additional information on the back of the card.
+- Error Handling: If there is an error while fetching Pokémon data, an error dialog will be shown to the user.
+
+## Screenshots
+
+![Screenshot 1](screenshots/screenshot1.png)
+![Screenshot 2](screenshots/screenshot2.png)
+
+## Dependencies
+
+The following dependencies are used in this project:
+
+- `flip_card` - Flutter package for creating flipping animations.
+- `flutter_spinkit` - Flutter package for displaying loading spinners.
+- `http` - Dart package for making HTTP requests.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To run the Pokémon Card application on your local machine, follow these steps:
 
-A few resources to get you started if this is your first Flutter project:
+1. Make sure you have Flutter installed. For installation instructions, refer to the official Flutter documentation: [Flutter - Get Started](https://flutter.dev/docs/get-started)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. Clone this repository:
+git clone https://github.com/your-username/pokemon-card.git
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+3. Change into the project directory:
+cd pokemon-card
+
+
+4. Install the dependencies:
+flutter pub get
+
+
+5. Run the app:
+flutter run
+
+
+Make sure you have a device connected or an emulator running.
+
+6. Explore the Pokémon Card app and generate random Pokémon cards!
+
