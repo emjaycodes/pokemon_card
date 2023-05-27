@@ -227,6 +227,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.0"
+  network_image:
+    dependency: "direct main"
+    description:
+      name: network_image
+      sha256: d257e7601f72089f18f1d05e62c9cd100f49bd256c30c98cba0b1cdaf3d517e3
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.1"
   octo_image:
     dependency: transitive
     description:
@@ -307,6 +315,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.11.1"
+  placeholder_images:
+    dependency: "direct main"
+    description:
+      name: placeholder_images
+      sha256: "5eb26d8ffcce4c7fdc50839cfcf8fc49bd46bacbaee7a64a18ea465f84a5771d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.1"
   platform:
     dependency: transitive
     description:

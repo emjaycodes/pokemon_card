@@ -34,6 +34,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                       height: snapshot.data!.height,
                       id: snapshot.data!.id,
                       name: snapshot.data!.name,
-                      sprites: snapshot.data!.sprites,
+                      sprites: snapshot.data?.sprites ?? "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png",
                       type: snapshot.data!.type,
                       weight: snapshot.data!.weight,
                     );
