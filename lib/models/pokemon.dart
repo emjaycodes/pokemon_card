@@ -6,8 +6,6 @@ import 'dart:convert';
 
 PokemonInfo pokemonInfoFromJson(String str) => PokemonInfo.fromJson(json.decode(str));
 
-// String pokemonInfoToJson(PokemonInfo data) => json.encode(data.toJson());
-
 
 class PokemonInfo {
    String type;
@@ -37,7 +35,6 @@ class PokemonInfo {
         name: json['species']['name'], 
         sprites: json['sprites']['other']['home']['front_default'],
         abilities: json['abilities'][0]['ability']['name'],
-        // abilities[0].ability.name
         );
         
         
