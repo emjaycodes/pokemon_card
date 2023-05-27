@@ -8,10 +8,8 @@ Pokémon Card is a Flutter application that generates random Pokémon cards usin
 - Flipping Animation: The Pokémon card uses a flip animation to reveal additional information on the back of the card.
 - Error Handling: If there is an error while fetching Pokémon data, an error dialog will be shown to the user.
 
-## Screenshots
+## Output
 
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
 
 ## Dependencies
 
@@ -28,7 +26,7 @@ To run the Pokémon Card application on your local machine, follow these steps:
 1. Make sure you have Flutter installed. For installation instructions, refer to the official Flutter documentation: [Flutter - Get Started](https://flutter.dev/docs/get-started)
 
 2. Clone this repository:
-git clone https://github.com/your-username/pokemon-card.git
+git clone https://github.com/emjaycodes/pokemon_card.git
 
 
 3. Change into the project directory:
