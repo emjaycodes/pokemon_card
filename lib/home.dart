@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:pokemon_card/models/pokemon.dart';
 import 'package:pokemon_card/services/networking.dart';
+import 'package:pokemon_card/utilities/generate_button.dart';
 import 'utilities/fliping_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -74,29 +75,7 @@ class _HomePageState extends State<HomePage> {
           const SizedBox(
             height: 10,
           ),
-          GestureDetector(
-            onTap: generateRandomPokemon,
-            child: Container(
-              height: 50,
-              width: 150,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.yellow,
-                boxShadow: const [
-                  BoxShadow(
-                      color: Colors.black,
-                      offset: Offset(0, 3.0),
-                      blurRadius: 1.0,
-                      spreadRadius: 1.0)
-                ],
-              ),
-              child: const Center(
-                  child: Text(
-                'Generate',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
-              )),
-            ),
-          ),
+         GenerateButton(function: generateRandomPokemon),
           const SizedBox(height: 20,)
         ],
       ),
