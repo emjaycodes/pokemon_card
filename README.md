@@ -9,7 +9,7 @@ Pokémon Card is a Flutter application that generates random Pokémon cards usin
 - Error Handling: If there is an error while fetching Pokémon data, an error dialog will be shown to the user.
 
 ## Output
-
+![](https://github.com/emjaycodes/pokemon_card/blob/master/pokemongif.gif)
 
 ## Dependencies
 
