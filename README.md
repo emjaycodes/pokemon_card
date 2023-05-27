@@ -35,8 +35,9 @@ cd pokemon-card
 '''
 
 4. Install the dependencies:
+```dart
 flutter pub get
-
+```
 
 5. Run the app:
 flutter run
