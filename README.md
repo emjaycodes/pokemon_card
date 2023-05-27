@@ -30,8 +30,9 @@ git clone https://github.com/emjaycodes/pokemon_card.git
 
 
 3. Change into the project directory:
+'''dart
 cd pokemon-card
-
+'''
 
 4. Install the dependencies:
 flutter pub get
